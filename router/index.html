@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style>
+
+</style>
+</head>
+
+<body>
+<div id="waterfall">
+
+</div>
+
+<script src="jquery-1.7.2.min.js" language="javascript"></script>
+
+	
+<script>
+$(function(){
+
+		    jQuery.ajax({ 
+		        type: 'GET',
+		        //url: 'http://www.battlenet.com.cn/sc2/zh/ladder/grandmaster/wings-of-liberty' ,
+		        url:"http://127.0.0.1:8888/getHtml",
+		        jsonp:"callback",
+		        jsonpCallback:"jj",
+		        dataType: 'jsonp',
+ 
+		        success: function(data) {
+		        	alert(data.aa);
+		        },
+		        complete:function(data){//debugger;
+//alert(data);
+		        },
+		        error:function(data){//debugger;
+//alert(3);
+		        }
+		    })
+})
+</script>
+</body>
+</html>
